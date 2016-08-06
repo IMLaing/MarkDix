@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* Apply All */
+html,body {
+    font-size: 1.3em;
+    height: 100%;
+}
+* {
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navbar */
+.navbar {
+    margin: 0px;
+    width: 100%;
+    top: 0px;
+    z-index: 9009;
+    background: rgba(143, 172, 57, .99);    
+}
+#navbar ul {
+    float: right;
+    color: whitesmoke !important;
+}
+#navbar ul a {
+    color: #FBEADA;
+    transition: ease-out .8s;
+}
+#navbar ul a:hover {
+    color: black;
+    background: rgba(85,102,34, 1);
+}
+
+div.navbar-header > a{
+    color: whitesmoke!important;
+}
+
+/* content */
+
+.albumcover {
+    width: 100%;
+    margin: .1em 1em;
+}
+
+.offSet {
+    padding-top: 3em;
+}
+
+/* Footer */
+.footer, .push {
+    height: 4em;
+}
+.footWrapper, .social {
+
+
+    background: rgba(64, 77, 25, 1);  
+
+}
+.footer .social li{
+
+    display: inline-block;
+}
+.social i {
+    font-size: 2em;
+    padding: 10px;
+}
+.copyright{
+    float: right;
+    color:black;
+}
+/* This is for the JS Lyrics */
+#quoteBtn{
+    background: none;
+    border: none;
+}
+
+.lyricButtons ul{
+    list-style: none;
+    float: left;
+}
+.lyricButtons li{
+    padding: 2px;
+    display: inline-block;
+}
+
+
+/* End JS Lyrics */
+
+/* text - rgba(170, 187, 51, 1)
+    background - rgba(85, 102, 34, 1)
+*/
