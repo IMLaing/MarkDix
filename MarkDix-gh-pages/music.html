@@ -1,50 +1,25 @@
-$( document ).ready(function() {
-
-$('.sticky').stick_in_parent();
-
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('nav').outerHeight();
-
-
-$(window).scroll(function(event){ //$(window), .scroll, event
-                 didScroll = true; 
-                 });
-
-setInterval(function() {
-if (didScroll) {
-  hasScrolled();
-  didScroll = false;
-  }
-}, 250);
-
-function hasScrolled(){
-  var st = $(this).scrollTop(); // .scrollTop
-  if (Math.abs(lastScrollTop-st) <= delta) //Math.abs
-  return;
-  if (st > lastScrollTop && st > navbarHeight) {
-    $('nav').removeClass('nav-down').addClass('nav-up');
-  } else {
-    if (st + $(window).height() < $(document).height()) {
-      $('nav').removeClass('nav-up').addClass('nav-down')
-    }
- 
-    
-  }
-     lastScrollTop = st;
-}
-
-});
-/*
-
-   <script>
-      
-  function getLyrics(x){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mark Dix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>		
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>	
+	</head>
+	
+	<body>
+	<script>
+	function getLyrics(x){
   
-document.getElementById("text").innerHTML(x); 
+document.getElementById("text").innerHTML = x; 
 }
-  
+	
 var hAR = "Well I met you on the back seat of your best friend's Chevrolet and the first thing that you told me was you'd soon be on your way my mind was set on empty, my heart about to bust when you dropped me on the pavement and you left me in the dust<br><br>Chorus: But it's all right mama you stole away my pride I wasn't goin' nowhere till you took me for a ride Well I was on my way back home, pretty mama when you rolled into town I never saw the likes of you to turn a man's head around you drove me up, you drove me down you drove me through the night but you just about drove me outa my mind when you drove out of my sight<br><br>Chorus<br><br> Now I'm standin down by the crossroads mama as the dust begins to clear I'm wonderin' what just hit me and where it disappeared My dreams are all broke down  I got a head full of misery Cuz your crazy lovin' hit and run Was just a bit too much for me <br><br> Chorus";
 
 var bMNM = "I sit by my window and sing our song but my words just fall to the floor they die like an echo from long ago cuz you're not beside me no more Dark are the shadows that crowd my room cold is the wind at my door deep is the sorrow that fills my heart cuz youre not beside me no more Where is the tenderness we once knew?<br><br>Where are the vows that we swore? How will I travel this long dark night if youre not beside me no more? Green was the springtime when first we met White was the dress that you wore Black is the night time <br><br>surrounding me and youre not beside me no more I went to the water to wash my tears and lay my soul by the shore but my heart it just broke like a wave on the beach cuz youre not beside me no more";
@@ -61,4 +36,98 @@ var rP = "My feet are feelin' heavy my mind is movin' slow I've got some trouble
 var rTST = "You are my angel you are the apple of my eye you lit the stars and you hung the moon but if I’m cryin’ baby you know the reason why cuz you give me the right to sing the blues<br> <br> I see you stretched out on your gold and silver bed I get excited and confused you take my lovin’ and you take my breath away and you give me the right to sing the blues<br> <br> You are my diva you are my queen of style and grace You always know just what to do You are so heavenly, I just cannot relate Cuz you ain’t got the right to sing the blues<br> <br>There are no wrinkles in your Mona Lisa smile You’ve got no messed-up attitudes You’ve got no worries  and you have no sleepless nights and you have got no right to sing the blues<br> <br> So it's, bye-bye baby bye-bye the time has come for me to go before I leave you on that highway headed west there’s just a few things I think you ought to know <br> <br> I slashed your tires and I broke your TV set I took your favorite dancing shoes I took your credit card  and ran up a little debt so you might have the right to sing the blues<br><br> Yes it's bye-bye baby bye-bye the cops are comin for you soon they want to ask about this money that you owe and about the drugs that I left hidden in your room<br><br> They want to take you for a little ride downtown and book you for the things you do and when they read your rights I’m sure they’ll let you know that now you’ve got the right to sing the blues<br><br> yes, you have got the right to sing the blues.";
 
 var tOS = "They've turned up the lights cleared off the floor closed all the windows and opened the doors The dancers are leavin' the evenin' is through but I'm still here dreamin' with you <br><br> We empty our glasses and lean on the wall the bartender's sayin' we've missed the last call and I may be crazy I've got it all wrong but I think there's  time for one song <br><br> Chorus: The hours will hurry the flowers will fade the memories will linger and go on their way but when it's all over and the dancin' is through this old song will still be for you<br><br> The days will go quickly the years they will roll the fashions will change and the children grow old But somethin' I've wanted to tell you so long will keep comin' back in this old song <br><br> Chorus: The hours will hurry... <br><br> And maybe one day in some faraway time we'll sit by a dance floor and sip one more wine And then if by chance they play this old song we'll know it's been right all along <br><br> Chorus: The hours will hurry...";
-   </script> */
+	 </script>
+	 
+	 
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+              <a class="navbar-brand" href="index.html">Mark Dix</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav mini">
+             	<li class="navlink"><a href="index.html"> Home </a></li>
+		<li class="navlink"><a  href="#"> Schedule</a></li>
+		<li class="active"><a  href="music.html"> Music</a></li>
+		<li class="navlink"><a  href="#"> About</a></li>
+		<li class="navlink"><a href="#contact"> Contact</a></li>
+            </ul>
+           </div>
+           </div>
+           </div>
+           </nav>  
+<div class="bg">
+  <div class="title text-center">
+
+    <h1> Mark Dix </h1>
+  </div>
+  <div class="container sche">
+
+    <h1 class="text-center">All in Good Time</h1>
+    <div class="col-md-3 toFront">
+        
+    <div class="lyricButtons">
+        <ul> 
+      <li><input type="button" id="quoteBtn" class="lyricBtn"value="Beside Me No More" onclick="getLyrics(bMNM);"  /></li>
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="Hit and Run" onclick="getLyrics(hAR);" /></li>
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="I Believe I Could Be Your Man" onclick="getLyrics(iBIC);" /></li>
+     <li> <input type="button" id="quoteBtn" class="lyricBtn" value="If I Had The Words" onclick="getLyrics(iIHT);" /></li>
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="Late One Morning" onclick="getLyrics(lOM);" /></li>
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="Looking For a Friend" onclick="getLyrics(lFAF);" /></li>
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="Resting Place" onclick="getLyrics(rP);" />
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="Right to Sing the Blues" onclick="getLyrics(rTST);" /></li>
+      <li><input type="button" id="quoteBtn" class="lyricBtn" value="The Old Song" onclick="getLyrics(tOS);" /></li>
+      <br><br>
+        </ul>
+    </div>
+    </div>
+      <div class="col-md-9">
+        <p id="text" class="text-center lyricText">
+        Which lyrics are you looking for?
+      </p>
+               </div>
+
+   
+
+
+  </div>
+  <div class="container sche">
+    <h1 class="text-center">Nobodys Angel</h1>
+    <img src="http://i.imgur.com/QhVA6rB.jpg" title="Nobodys Angel" class="img-responsive NoAngel"/> 
+  </div>
+  
+  <div class="contentFoot">
+    <a name="contact"></a>
+    <div class="contactInfo">
+      <h2>Contact Me!</h2>
+      <ul>
+        <li>
+          Phone: 978-555-0231</li>
+        <li>Email: Musicman@themagic.com</li>
+      </ul>
+    </div>
+    <div class="social">
+      <ul>
+        <li>
+          <a href="#"> <i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"> <i class="fa fa-twitter"></i></a>
+        </li>
+
+        <li>
+          <a href="#"> <i class="fa fa-youtube"></i></a>
+        </li>
+      </ul>
+
+      <p class="copyright"> © All words and Music by Artist </p>
+    </div>
+
+  </div>
+  </body>

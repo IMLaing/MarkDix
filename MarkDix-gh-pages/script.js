@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-$('.sticky').stick_in_parent();
 
 var didScroll;
 var lastScrollTop = 0;
