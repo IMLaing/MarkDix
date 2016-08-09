@@ -11,6 +11,9 @@ html,body {
   padding: 0;
 }
 
+.top-push {
+  margin-top: 100px;
+}
 .container {
     background: rgba(85, 102, 34, 1);
     border-radius: 25px;
@@ -18,28 +21,22 @@ html,body {
 }
 /* Navbar */
 .navbar {
+    position: fixed;
     margin: 0px;
     width: 100%;
     top: 0px;
     z-index: 9009;
-    background: rgba(143, 172, 57, .99);    
 }
-#navbar ul {
-    float: right;
-    color: whitesmoke !important;
-}
+
 #navbar ul a {
-    color: #FBEADA;
+    color: green;
     transition: ease-out .8s;
 }
 #navbar ul a:hover {
     color: black;
-    background: rgba(85,102,34, 1);
+    text-decoration: underline;
 }
 
-div.navbar-header > a{
-    color: whitesmoke!important;
-}
 
 /* content */
 
